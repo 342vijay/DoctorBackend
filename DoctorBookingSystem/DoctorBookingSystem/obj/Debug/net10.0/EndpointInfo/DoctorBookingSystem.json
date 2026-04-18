@@ -5,7 +5,30 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Appointment": {
+    "/api/Appointment/mybooking/{patientId}": {
+      "get": {
+        "tags": [
+          "Appointment"
+        ],
+        "parameters": [
+          {
+            "name": "patientId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Appointment/book": {
       "post": {
         "tags": [
           "Appointment"
@@ -29,6 +52,29 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Appointment/delete/{appointmentId}": {
+      "delete": {
+        "tags": [
+          "Appointment"
+        ],
+        "parameters": [
+          {
+            "name": "appointmentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -155,6 +201,10 @@
       "AppointmentDto": {
         "type": "object",
         "properties": {
+          "patientId": {
+            "type": "integer",
+            "format": "int32"
+          },
           "patientName": {
             "type": "string",
             "nullable": true

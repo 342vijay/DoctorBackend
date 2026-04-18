@@ -6,7 +6,7 @@ namespace DoctorBookingSystem.Model
     public class Appointment
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        
         public int appointmentId { get; set; }
         public int patientId { get; set; }
         public string patientName { get; set; }

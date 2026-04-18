@@ -159,3 +159,5 @@ C:\Users\vijay\Downloads\DoctorBookingSystem\DoctorBookingSystem\DoctorBookingSy
 C:\Users\vijay\Downloads\DoctorBookingSystem\DoctorBookingSystem\DoctorBookingSystem\obj\Debug\net10.0\DoctorBookingSystem.pdb
 C:\Users\vijay\Downloads\DoctorBookingSystem\DoctorBookingSystem\DoctorBookingSystem\obj\Debug\net10.0\DoctorBookingSystem.genruntimeconfig.cache
 C:\Users\vijay\Downloads\DoctorBookingSystem\DoctorBookingSystem\DoctorBookingSystem\obj\Debug\net10.0\ref\DoctorBookingSystem.dll
+C:\Users\vijay\Downloads\DoctorBookingSystem\DoctorBookingSystem\DoctorBookingSystem\obj\Debug\net10.0\DoctorBookingSystem.sourcelink.json
+C:\Users\vijay\Downloads\DoctorBookingSystem\DoctorBookingSystem\DoctorBookingSystem\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

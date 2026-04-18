@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DoctorBookingSystem.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260416052304_AddAppointmentOnly")]
-    partial class AddAppointmentOnly
+    [Migration("20260417135835_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

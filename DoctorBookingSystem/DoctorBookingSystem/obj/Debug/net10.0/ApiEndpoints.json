@@ -1,8 +1,8 @@
 [
   {
     "ContainingType": "DoctorBookingSystem.Controllers.AppointmentController",
-    "Method": "Book",
-    "RelativePath": "api/Appointment",
+    "Method": "BookAppointment",
+    "RelativePath": "api/Appointment/book",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -10,6 +10,38 @@
       {
         "Name": "dto",
         "Type": "DoctorBookingSystem.DTO.AppointmentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DoctorBookingSystem.Controllers.AppointmentController",
+    "Method": "DeleteBooking",
+    "RelativePath": "api/Appointment/delete/{appointmentId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DoctorBookingSystem.Controllers.AppointmentController",
+    "Method": "GetMyBookings",
+    "RelativePath": "api/Appointment/mybooking/{patientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

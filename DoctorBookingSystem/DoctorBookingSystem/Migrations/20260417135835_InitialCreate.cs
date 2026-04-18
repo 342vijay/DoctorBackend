@@ -12,6 +12,26 @@ namespace DoctorBookingSystem.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Appointments",
+                columns: table => new
+                {
+                    appointmentId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    patientId = table.Column<int>(type: "int", nullable: false),
+                    patientName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    age = table.Column<int>(type: "int", nullable: false),
+                    issue = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    speciality = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    doctorId = table.Column<int>(type: "int", nullable: false),
+                    date = table.Column<DateOnly>(type: "date", nullable: false),
+                    slot = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Appointments", x => x.appointmentId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Doctors",
                 columns: table => new
                 {
@@ -58,6 +78,9 @@ namespace DoctorBookingSystem.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Appointments");
+
             migrationBuilder.DropTable(
                 name: "Slots");
 
