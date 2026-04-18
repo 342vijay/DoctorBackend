@@ -10,19 +10,32 @@ namespace DoctorBookingSystem.Controllers
     public class AppointmentController : ControllerBase
     {
         private readonly AppointmentService _Service;
-        public AppointmentController(AppointmentService service)
-        {
-            _Service = service;
-        }
-        [HttpPost]
-        public async Task<IActionResult> Book(AppointmentDTO dto)
-        {
-            var result = await _Service.BookAppointment(dto);
+ public AppointmentController(AppointmentService service)
+ {
+     _service = service;
+ }
 
-            if (result == "Slot already booked")
-                return BadRequest(result);
+ // GET api/Appointment/mybooking/1
+ [HttpGet("mybooking/{patientId}")]
+ public async Task<IActionResult> GetMyBookings(int patientId)
+ {
+     var data = await _service.GetMyBookings(patientId);
+     return Ok(data);
+ }
+ // POST api/Appointment/book
+ [HttpPost("book")]
+ public async Task<IActionResult> BookAppointment(AppointmentDto dto)
+ {
+     var result = await _service.BookAppointment(dto);
+     return Ok(result);
+ }
 
-            return Ok(result);
-        }
+ // DELETE api/Appointment/delete/5
+ [HttpDelete("delete/{appointmentId}")]
+ public async Task<IActionResult> DeleteBooking(int appointmentId)
+ {
+     var result = await _service.DeleteBooking(appointmentId);
+     return Ok(result);
+ }
     }
 }
